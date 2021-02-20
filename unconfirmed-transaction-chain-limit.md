@@ -62,3 +62,7 @@ Ideally, the unconfirmed transaction chain limit would be removed completely fro
 ## Timeline
 
 The change to the unconfirmed transaction chaining limit is a network-change only, meaning it is only enforced at the network/p2p layer and therefore cannot cause a chain split.  This proposal is low risk and provides high benefit to the network as a whole.  For this reason, and the severity of impact caused by non-protocol developers, it is requested that this change be implemented in a coordinated manner as soon as possible.  We believe the most sensical timeline for that is the previous, although deprecated, date of May 15th.  Choosing this date in particular is not significant in and of itself, although there seems to be no reason to deviate from history purely for the sake of it.
+
+## License
+
+This document is placed in the public domain.
