@@ -91,7 +91,7 @@ This change to the unconfirmed transaction chaining limit is a network-change on
 	General Protocols
 	Bitcoin.com
 	Coinflex
-	Flowee the Hub
+	Flowee
 
 **Stakeholders Position Unknown**
 BCHD
