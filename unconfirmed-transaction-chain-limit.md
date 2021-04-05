@@ -50,15 +50,8 @@ Software Verde has developed multiple applications that create and distribute tr
 
 
 ## Technical Description
-For example, early in the CHIP's life, basic outlines of possibilities, and later in the CHIP's life, specifically architecture, etc
-https://docs.google.com/document/d/1Rgc60VipaMnbWksyXw_3L0oOqqCW2j0FKtENlqLgqYw/edit
-** Implementations **
-This section should contain code examples and proof-of-concepts of the CHIP's proposed change, or links to them. It can be updated as the CHIP makes its way through evaluation and testing.
-** Specification **
-This section should contain detailed specifications of the proposal, including but not limited to protocol formats, parameter values and expected workflows.
-** Test Cases **
-This section should contain test cases that can be used to evaluate new implementations against existing ones.
 
+The current policy limit of 50 on unconfirmed ancestors or descendants is to be removed entirely once MTP >= 1621080000 and this limit removal remains in affect even in the case of a subsequent re-org to below that MTP.
 
 ## Security Considerations
 
