@@ -51,20 +51,8 @@ Software Verde has developed multiple applications that create and distribute tr
 
 
 ## Technical Description
-This section has been left empty and is to include technical descriptions of the change request. 
-An example: https://docs.google.com/document/d/1Rgc60VipaMnbWksyXw_3L0oOqqCW2j0FKtENlqLgqYw/edit
 
-**Implementations**
-
-This section should contain code examples and proof-of-concepts of the CHIP's proposed change, or links to them. It can be updated as the CHIP makes its way through evaluation and testing.
-
-**Specification**
-
-This section should contain detailed specifications of the proposal, including but not limited to protocol formats, parameter values and expected workflows.
-
-**Test Cases**
-
-This section should contain test cases that can be used to evaluate new implementations against existing ones.
+The current policy limit of 50 unconfirmed ancestors or descendants is to be removed entirely once MTP >= 1621080000 and this limit removal remains in affect even in the case of a subsequent re-org to below that MTP.
 
 
 ## Security Considerations
@@ -72,9 +60,6 @@ This section should contain test cases that can be used to evaluate new implemen
 Uncoordinated changes to mempool rules would likely result in a degradation of 0-conf transaction security.  0-conf transaction security is dependent on the network’s solution to circumventing double-spends. If nodes do not agree to enforce the same limits, merchants accepting transactions that have exceeded the unconfirmed transaction chaining limit would be at an increased risk of encountering and accepting a double-spend transaction.  
 
 Example:  A malicious user submits a transaction exceeding the current chaining limit, knowing the merchant is connected to a node that does not enforce the limit. The node accepts this transaction as it is considered valid and the merchant believes they’ve received a payment from a valid 0-conf transaction. Due to its unconfirmed chain depth, for this transaction to propagate the node in question must wait to broadcast the transaction to its peers until after a new block has been found. During this time a malicious user could prepare a second transaction spending the same coin.  If submitted immediately after the new block has been found the two transactions will be in a race. Since the first transaction has not yet been broadcast to the rest of the network, there is an increased likelihood the second transaction could be seen by the majority of the network before the first transaction has had an opportunity to propagate. This situation is exacerbated if the node accepting the longer unconfirmed chain depth transaction does not also re-relay the transaction after a new block is mined that does not contain the transaction.
-
-
-
 
 
 ## Implementation Costs and Risks
