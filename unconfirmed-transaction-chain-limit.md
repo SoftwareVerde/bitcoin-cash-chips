@@ -32,7 +32,8 @@ It is also not always known to the user, service, or wallet how deep the unconfi
 
 The problem from a user/app’s perspective is that they have created a valid transaction and are given little indication that it will not be mined within a block.  The tools for recourse are limited, and the tools for monitoring for such a situation is also limited.
 
-The unconfirmed transaction chain limit is mostly an artifact of a relatively unused feature heldover from artificially restricting block size, a feature called “Child Pays for Parent”.  According to research conducted by Tom Zander found at https://flowee.org/news/2020-07-cpfp-research/, there is very limited usage of CPfP on the BCH network.  In short, in his 3 months of monitoring network activity there were only 7 valid use cases where CPfP was used to lift the transaction above the 1-sat-per-byte.  This feature is not used in BCH yet still restricts the user experience and increases the complexity of development of wallets and applications built on top of Bitcoin Cash.  
+
+The unconfirmed transaction chain limit is mostly an artifact of a relatively unused feature heldover from artificially restricting block size, a feature called “Child Pays for Parent”.  According to research conducted by Tom Zander found [here](https://flowee.org/news/2020-07-cpfp-research/), there is very limited usage of CPfP on the BCH network.  In short, in his 3 months of monitoring network activity there were only 7 valid use cases where CPfP was used to lift the transaction above the 1-sat-per-byte.  This feature is not used in BCH yet still restricts the user experience and increases the complexity of development of wallets and applications built on top of Bitcoin Cash.
 
 Issues with transaction chaining are exacerbated by the long block times periodically seen in Bitcoin Cash, the causes of which have been discussed elsewhere and were a major motivating factor in switching to the ASERT difficult adjustment algorithm.  Having a static transaction chaining limit while blocks somewhat frequently take over an hour (or even two hours) to be mined, results in a scenario where transactions could be significantly more at risk than normal.  Note, though, that even without these extenuating circumstances, this is always a risk with the proof of work system.
 
@@ -106,17 +107,18 @@ Bitcoin Cash related businesses.
 In our previous discussion we have engaged with several key stakeholders to understand their position on the requested change.
 
 **Stakeholders Engaged in Discussion**
-BCHN
-Bitcoin Unlimited
-Bitcoin Verde
-Bitcoin.com
-Coinflex
-Flowee the Hub
-General Protocols
+	BCHN
+	Bitcoin Unlimited
+	Bitcoin Verde
+	General Protocols
+	Bitcoin.com
+	Coinflex
+	Flowee
+  General Protocols
 
 **Stakeholders Position Unknown**
-BCHD
-Knuth
+  BCHD
+  Knuth
 
 ## Stakeholders Statements
 
