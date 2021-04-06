@@ -51,7 +51,7 @@ Software Verde has developed multiple applications that create and distribute tr
 
 ## Technical Description
 
-The current policy limit of 50 on unconfirmed ancestors or descendants is to be removed entirely once MTP >= 1621080000 and this limit removal remains in affect even in the case of a subsequent re-org to below that MTP.
+The current policy limit of 50 unconfirmed ancestors or descendants is to be removed entirely once MTP >= 1621080000 and this limit removal remains in affect even in the case of a subsequent re-org to below that MTP.
 
 ## Security Considerations
 
