@@ -11,11 +11,11 @@ Josh Green, Software Verde
     Mark Lamb, CoinFLEX
 
 ## Summary
-**Version 1.2**
+**Version 1.2.1**
 
 When a transaction is first transmitted on the Bitcoin Cash network, it is considered “unconfirmed” until it is “mined” into a block.  These transactions that are not yet mined are also referred to as “zero-conf” transactions.  Transactions are dependent upon other transactions, such that they are chained together; the value allocated by one transaction is then spent by a subsequent transaction.  
 
-Currently, the Bitcoin Cash network only permits transactions to be chained together 50 times before a block must include them.  Transactions exceeding the 50th chain are often ignored by the network, despite being valid.  Once a transaction is submitted to the network, it cannot be revoked. This situation, when encountered, can be extremely difficult to remedy with today’s available tools and simultaneously creates an unnecessary amount of complexity when being accounted for by network and applications developers. This CHIP is a formal request to remove the unconfirmed transaction chain limit entirely from the Bitcoin Cash ecosystem.
+Currently, the Bitcoin Cash network only permits transactions to be chained together 50 times before a block must include them.  Transactions exceeding the 50th chain are often ignored by the network, despite being valid.  Once a transaction is submitted to the network, it cannot be revoked. This situation, when encountered, can be extremely difficult to remedy with today’s available tools and simultaneously creates an unnecessary amount of complexity when being accounted for by network and applications developers. This CHIP is a formal request to remove the unconfirmed transaction chain limit=depth (50tx) and size (101kb) entirely from the Bitcoin Cash ecosystem.
 
 **Discussion URL:** https://bitcoincashresearch.org/t/chip-unconfirmed-transaction-chain-limit/302/32
 
@@ -28,7 +28,7 @@ Transactions exceeding the unconfirmed transaction chaining limit are often igno
 
 Additionally, determining if the transaction was not accepted by the network is a difficult to solve problem with the current available toolset.  Error-responses from nodes rejecting a transaction have not been standardized, and often times nodes will silently reject the transaction--sometimes the node may not even be aware that the transaction is invalid because its dependent has not been seen yet, and the node itself cannot determine the transaction’s chain depth.
 
-It is also not always known to the user, service, or wallet how deep the unconfirmed transaction already is when it’s received; it’s entirely possible the coins received are at the 50th limit, and determining that state can be near-impossible without the help of a full-node.
+It is also not always known to the user, service, or wallet how deep the unconfirmed transaction already is when it’s received; it’s entirely possible the coins received are at the limit, and determining that state can be near-impossible without the help of a full-node.
 
 The problem from a user/app’s perspective is that they have created a valid transaction and are given little indication that it will not be mined within a block.  The tools for recourse are limited, and the tools for monitoring for such a situation is also limited.
 
@@ -52,7 +52,7 @@ Software Verde has developed multiple applications that create and distribute tr
 
 ## Technical Description
 
-The current policy limit of 50 unconfirmed ancestors or descendants is to be removed entirely once MTP >= 1621080000 and this limit removal remains in affect even in the case of a subsequent re-org to below that MTP.
+The current policy limit of 50 unconfirmed ancestors or descendants, and the 101kb chain limit, is to be removed entirely once MTP >= 1621080000 and this limit removal remains in affect even in the case of a subsequent re-org to below that MTP.
 
 
 ## Security Considerations
@@ -99,7 +99,7 @@ In our previous discussion we have engaged with several key stakeholders to unde
 	Bitcoin.com
 	Coinflex
 	Flowee
-  General Protocols
+  	General Protocols
 
 **Stakeholders Position Unknown**
   BCHD
